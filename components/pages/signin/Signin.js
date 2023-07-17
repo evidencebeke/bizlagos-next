@@ -38,7 +38,7 @@ const Signin = () => {
               </div>
               <div>
                 <p>
-                  Don't have an account?{" "}
+                  Don&apos;t have an account?{" "}
                   <Link className="text-green-500" href={"/signup"}>
                     Register
                   </Link>{" "}
