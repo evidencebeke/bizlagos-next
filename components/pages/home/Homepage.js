@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../../Layout";
 import json from "../../../data/listings.json";
+import Button from "../../ui/Button";
 
 const Homepage = () => {
   const [product, setProduct] = useState("");
@@ -33,9 +34,7 @@ const Homepage = () => {
               ))}
             </select>
           </div>
-          <button className="bg-green-500 tracking-wider text-white py-2 rounded px-7 self-start">
-            Search
-          </button>
+          <Button>Search</Button>
         </form>
       </div>
     </Layout>
