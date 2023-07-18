@@ -25,7 +25,10 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              <Link className="block py-3 px-6 rounded-md   " href={"/"}>
+              <Link
+                className="block py-3 px-6 rounded-md   "
+                href={"/create_listing"}
+              >
                 Post a Listing
               </Link>
             </li>
@@ -53,7 +56,7 @@ const Nav = () => {
               <Link href={"/"}>Home</Link>
             </li>
             <li>
-              <Link href={"/"}>Post a Listing</Link>
+              <Link href={"/create_listing"}>Post a Listing</Link>
             </li>
             <li>
               <Link href={"/"}>About</Link>

@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import Input from "../../ui/Input";
 import Layout from "../../Layout";
 import { object, string, ref } from "yup";
-import { Formik, Form, useField, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import Button from "../../ui/Button";
 import Link from "next/link";
 const phoneRegExp = /^([0]{1})[0-9]{10}$/;
 const RegisterValidation = object().shape({
-  firstName: string().required("Required"),
+  firstName: string().required("You must enter a first name"),
 
-  lastName: string().required("Required"),
+  lastName: string().required("Please enter your last name"),
   email: string()
     .required("Valid Email Required")
     .email("Valid Email Required"),
   username: string().required("Please enter a username"),
   password: string()
     .min(8, "Password must be at least 8 character long")
-    .required("Required"),
+    .required("Password is required"),
   confirmPassword: string()
     .required("Please confirm your password")
     .oneOf([ref("password")], "Passwords do not match"),
@@ -47,7 +47,7 @@ const Signup = () => {
         {() => {
           return (
             <Form className="container mx-auto flex justify-center items-center my-12 flex-col">
-              <div className="grid md:grid-cols-2 gap-5  w-[80%]">
+              <div className="grid md:grid-cols-2 gap-5 w-[90%]  md:w-[80%]">
                 <Input name="firstName" label="First Name" />
 
                 <Input name="lastName" label="Last Name" />
@@ -62,7 +62,7 @@ const Signup = () => {
                 <Input type="tel" name="phone" label="Phone number" />
               </div>
 
-              <div className="w-[80%] my-5">
+              <div className="w-[90%]  md:w-[80%] my-5">
                 <Button type="submit" className="mt-4 w-50">
                   Submit
                 </Button>

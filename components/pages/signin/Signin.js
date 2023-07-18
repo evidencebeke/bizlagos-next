@@ -28,11 +28,11 @@ const Signin = () => {
         {() => {
           return (
             <Form className="container mx-auto flex justify-center items-center my-12 flex-col">
-              <div className="grid w-[80%] space-y-5 ">
+              <div className="grid w-[90%]  md:w-[80%] space-y-5 ">
                 <Input name="username" type="text" label="Username" />
                 <Input name="password" type="password" label="Password" />
               </div>
-              <div className="w-[80%] my-5">
+              <div className="w-[90%]  md:w-[80%] my-5">
                 {" "}
                 <Button type="submit">Sign in </Button>
               </div>

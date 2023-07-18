@@ -6,7 +6,7 @@ const signup = () => {
   return (
     <>
       <Head>
-        <title>Bizlagos - Sign in</title>
+        <title>Bizlagos - Sign up</title>
         <meta name="description" content="Log in to your account" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
